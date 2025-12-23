@@ -1,2 +1,3 @@
-def main() -> None:
-    print("Hello from nixpy!")
+from cyclopts import App
+
+app = App("nixpy")
