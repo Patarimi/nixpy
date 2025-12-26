@@ -1,9 +1,10 @@
 import os
-from nixpy import main as m
+from nixthon import main as m
 
 
 def test_main():
     assert m.nix_check()
+
 
 def test_to_wsl():
     if os.name == "nt":
@@ -11,6 +12,7 @@ def test_to_wsl():
         assert m.to_wsl("\\\\Server\\Share") == "./\\\\Server/Share"
     else:
         assert m.to_wsl("/home/user") == "/home/user"
+
 
 def test_nix_run():
     proc = m.nix_run(["echo Hello, Nix!"])

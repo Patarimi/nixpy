@@ -1,3 +1,3 @@
 from cyclopts import App
 
-app = App("nixpy")
+app = App("nixthon")
